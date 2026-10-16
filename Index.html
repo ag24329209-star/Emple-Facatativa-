@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Empleo Facatativá</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f5f7f3;--surface:#fff;--ink:#1b2a35;--muted:#566570;--green:#1f7a56;--rose:#d63a73;--line:#d9e0da;--hero:#1f7a56;--hero-ink:#fff;--on:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111a1f;--surface:#192630;--ink:#e9efe9;--muted:#9fb0b8;--green:#4cc596;--rose:#ff6b9d;--line:#2a3b46;--hero:#14543b;--hero-ink:#f3fbf6;--on:#0e1a16}}
+:root[data-theme="dark"]{--bg:#111a1f;--surface:#192630;--ink:#e9efe9;--muted:#9fb0b8;--green:#4cc596;--rose:#ff6b9d;--line:#2a3b46;--hero:#14543b;--hero-ink:#f3fbf6;--on:#0e1a16}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;font-size:17px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:var(--hero);color:var(--hero-ink);padding:52px 0 40px}
+h1{font-size:clamp(2.3rem,9vw,3.8rem);line-height:1.02;font-weight:800;margin:0 0 14px;letter-spacing:-.02em}
+header p{font-size:1.12rem;max-width:34em;margin:0 0 24px;opacity:.95}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:12px 20px;border-radius:999px;font:inherit;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid transparent;cursor:pointer}
+.btn.w{background:#fff;color:#14543b}
+.btn.o{border-color:#fff;color:#fff;background:transparent}
+.btn.g{background:var(--green);color:var(--on)}
+.btn.r{background:var(--rose);color:#fff}
+.btn.l{background:transparent;border-color:var(--line);color:var(--ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+nav{display:flex;gap:8px;overflow-x:auto;padding:14px 20px;max-width:760px;margin:0 auto}
+nav a{white-space:nowrap;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:600}
+section{padding:40px 0 4px}
+h2{font-size:1.85rem;line-height:1.15;margin:0 0 8px;font-weight:800}
+h3{font-size:1.2rem;margin:26px 0 10px}
+.lead{color:var(--muted);margin:0 0 20px;max-width:36em}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.box b{display:block;margin-bottom:3px}
+.box span,.box p{color:var(--muted);font-size:.96rem;margin:2px 0}
+.vac{border-left:6px solid var(--rose);border-radius:6px 14px 14px 6px;margin-bottom:10px}
+.vac small{display:block;color:var(--rose);font-weight:600;margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.92rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--green);color:var(--on);border-color:var(--green)}
+label{display:block;font-weight:600;font-size:.93rem;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:1rem}
+textarea{min-height:70px;resize:vertical}
+.out{white-space:pre-wrap;background:var(--bg);border:1px dashed var(--green);border-radius:10px;padding:12px;margin:12px 0 8px;font-size:.95rem}
+.hid{display:none}
+.steps{margin:12px 0 0;padding-left:22px}
+.steps li{margin-bottom:8px}
+.note{color:var(--muted);font-size:.9rem;margin-top:10px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:9px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:9px 0 0;color:var(--muted)}
+.bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .25s}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-weight:400;margin:0}
+.ck input{width:22px;height:22px;margin-top:2px;flex:none}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);margin-top:12px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line)}
+th{color:var(--green)}
+tr:last-child td{border-bottom:0}
+.x{background:none;border:0;color:var(--muted);cursor:pointer;font:inherit;text-decoration:underline;padding:0}
+footer{margin-top:52px;padding:26px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:.93rem}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Empleo y formalización en Facatativá.</h1>
+<p>Guía sencilla para que vendedores y trabajadores informales se formalicen, y un espacio para que los jóvenes encuentren vacantes y su primer empleo. Proyecto de estudiantes de la Universidad de Cundinamarca.</p>
+<div class="row">
+<a class="btn w" data-link="wa" href="#unete">Unirme al grupo de WhatsApp</a>
+<a class="btn o" data-link="ig" href="#unete">Seguir en Instagram</a>
+</div></div></header>
+
+<nav aria-label="Secciones">
+<a href="#formalizacion">Formalízate</a><a href="#vacantes">Vacantes</a><a href="#primer">Primer empleo</a><a href="#directorio">Directorio</a><a href="#proyecto">Proyecto</a><a href="#unete">Únete</a>
+</nav>
+
+<main class="wrap">
+
+<section id="vacantes">
+<h2>Vacantes</h2>
+<p class="lead">Publica una oferta que encontraste: la página crea el texto listo para pegar en Instagram o WhatsApp.</p>
+<div class="chips" id="fv" role="group" aria-label="Filtrar vacantes por sector"></div>
+<div id="vlist"></div>
+<div class="box">
+<b>Crear publicación de vacante</b>
+<label for="v-sec">Sector</label><select id="v-sec"></select>
+<label for="v-car">Cargo</label><input id="v-car" placeholder="Ej: auxiliar de almacén">
+<label for="v-emp">Empresa o negocio</label><input id="v-emp">
+<label for="v-req">Requisitos</label><textarea id="v-req" placeholder="Ej: bachiller, sin experiencia"></textarea>
+<label for="v-con">Contacto (correo, teléfono o dirección)</label><input id="v-con">
+<div class="row" style="margin-top:14px"><button class="btn g" id="v-add" type="button">Crear y guardar</button></div>
+<div class="out hid" id="v-out"></div>
+<button class="btn l hid" id="v-copy" type="button">Copiar texto</button>
+<p class="note">Las vacantes quedan guardadas solo en este dispositivo. Para que las vea todo el mundo, publícalas en Instagram y WhatsApp.</p>
+</div>
+</section>
+
+<section id="formalizacion">
+<h2>Formalízate</h2>
+<p class="lead">Elige tu caso y mira los pasos básicos.</p>
+<div class="grid">
+<div class="box"><b>Salud</b><span>Atención médica para ti y tu familia.</span></div>
+<div class="box"><b>Pensión</b><span>Ahorro para cuando ya no puedas trabajar.</span></div>
+<div class="box"><b>Riesgos laborales</b><span>Cobertura si te accidentas trabajando.</span></div>
+<div class="box"><b>Más oportunidades</b><span>Facilita créditos, contratos y clientes.</span></div>
+</div>
+<h3>¿Cuál es tu caso?</h3>
+<div class="chips" id="prof" role="group" aria-label="Tipo de trabajador"></div>
+<div class="box hid" id="prof-out"><b id="prof-t"></b><ol class="steps" id="prof-s"></ol></div>
+<p class="note">Son pasos generales. Confirma requisitos y costos actuales con la entidad antes de hacer el trámite.</p>
+<h3>Dudas frecuentes</h3>
+<details><summary>¿Formalizarme es muy costoso?</summary><p>Tiene costos, pero a cambio tienes salud, pensión y protección. Consulta los valores vigentes en la Cámara de Comercio o en tu EPS.</p></details>
+<details><summary>¿Puedo ser formal si apenas empiezo?</summary><p>Sí. Muchos negocios pequeños empiezan con el registro básico y van ajustándose a medida que crecen.</p></details>
+<details><summary>¿Qué pasa si no tengo contrato?</summary><p>Pídelo por escrito. Sin contrato es más difícil probar tu vínculo laboral y reclamar tus derechos.</p></details>
+</section>
+
+<section id="primer">
+<h2>Mi primer empleo</h2>
+<p class="lead">Marca lo que ya tienes listo para entregar tu hoja de vida.</p>
+<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="bar"><i id="barfill"></i></div>
+<div id="ck"></div>
+<p class="note" id="ckmsg"></p>
+<h3>Sin experiencia, ¿qué pongo?</h3>
+<details><summary>Cuenta lo que sí has hecho</summary><p>Estudios, cursos (por ejemplo del SENA), voluntariados, ayuda en un negocio familiar o trabajos por días cuentan como experiencia.</p></details>
+<details><summary>Cómo prepararte para la entrevista</summary><p>Averigua qué hace la empresa, llega unos minutos antes, saluda con respeto y prepara dos ejemplos de situaciones donde fuiste responsable.</p></details>
+<details><summary>Cómo cuidarte de ofertas falsas</summary><p>Desconfía si piden dinero por adelantado para contratarte. Verifica que la empresa exista y no compartas datos bancarios en la primera conversación.</p></details>
+</section>
+
+<section id="directorio">
+<h2>Directorio de primer empleo</h2>
+<p class="lead">Empresas y negocios de Facatativá que reciben hojas de vida de jóvenes. Búscalos o agrega uno nuevo.</p>
+<label for="q">Buscar</label><input id="q" type="search" placeholder="Nombre o perfil">
+<div class="chips" id="fe" style="margin-top:12px" role="group" aria-label="Filtrar directorio por sector"></div>
+<div class="scroll"><table><thead><tr><th>Empresa</th><th>Sector</th><th>Perfiles</th><th>Contacto</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+<div class="box" style="margin-top:14px">
+<b>Agregar empresa</b>
+<label for="e-n">Nombre</label><input id="e-n">
+<label for="e-s">Sector</label><select id="e-s"></select>
+<label for="e-p">Perfiles que buscan</label><input id="e-p" placeholder="Ej: bachilleres, estudiantes">
+<label for="e-c">Cómo contactar</label><input id="e-c">
+<div class="row" style="margin-top:14px"><button class="btn g" id="e-add" type="button">Agregar</button><button class="btn l" id="e-copy" type="button">Copiar directorio</button></div>
+<p class="note">Agrega solo información que hayas verificado. Se guarda en este dispositivo.</p>
+</div>
+</section>
+
+<section id="proyecto">
+<h2>Sobre el proyecto</h2>
+<p class="lead">Actividad “¡Soy UCundinamarca, soy ciudadano del Siglo 21!”, realizada por Cristian Felipe Hernández y David Santiago Ramírez.</p>
+<div class="box"><b>Problema</b><p>Dificultad para acceder a empleos formales, estables y de calidad en Facatativá, que afecta especialmente a los jóvenes.</p></div>
+<h3>Nuestras tres soluciones</h3>
+<div class="grid">
+<div class="box"><b>Red estudiantil de apoyo al empleo</b><span>Grupo de WhatsApp con ofertas verificadas, prácticas y oportunidades de primer empleo.</span></div>
+<div class="box"><b>Campaña de formalización</b><span>Instagram con infografías y publicaciones para vendedores, emprendedores y pequeños comerciantes.</span></div>
+<div class="box"><b>Base de datos de primer empleo</b><span>Directorio de empresas y negocios que reciben hojas de vida de jóvenes (en esta página).</span></div>
+</div>
+<h3>Evidencias</h3>
+<p class="lead">Aquí puedes revisar los canales y las publicaciones del proyecto.</p>
+<div class="row">
+<a class="btn r" data-link="ig" href="#unete">Ver el Instagram</a>
+<a class="btn g" data-link="wa" href="#unete">Ver el grupo de WhatsApp</a>
+</div>
+</section>
+
+<section id="unete">
+<h2>Únete</h2>
+<p class="lead">Recibe las vacantes apenas se publican y comparte con quien las necesite.</p>
+<div class="row">
+<a class="btn g" data-link="wa" href="#unete">WhatsApp</a>
+<a class="btn r" data-link="ig" href="#unete">Instagram</a>
+</div>
+</section>
+</main>
+<footer><div class="wrap">Proyecto de la Universidad de Cundinamarca sobre empleo y formalización laboral en Facatativá. Información general: confirma requisitos y costos en cada entidad.</div></footer>
+
+<script>
+var LINKS={wa:"https://chat.whatsapp.com/JC9nTVeRniALbMEBsnXMYa",ig:"https://www.instagram.com/empleo.facatativa/"}; /* pega aquí los enlaces */
+var SECT=["Comercio","Floricultura e industria","Restaurantes y servicios","Educación y salud","Otro"];
+var $=function(s){return document.querySelector(s)};
+function load(k){try{return JSON.parse(localStorage.getItem(k))||[]}catch(e){return[]}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n}
+function copy(txt,btn){var ok=function(){var o=btn.textContent;btn.textContent="¡Copiado!";setTimeout(function(){btn.textContent=o},1500)};
+try{navigator.clipboard.writeText(txt).then(ok,function(){})}catch(e){}}
+document.querySelectorAll("[data-link]").forEach(function(a){var u=LINKS[a.dataset.link];if(u){a.href=u;a.target="_blank";a.rel="noopener"}});
+SECT.forEach(function(s){["v-sec","e-s"].forEach(function(id){var o=el("option",null,s);o.value=s;$("#"+id).appendChild(o)})});
+
+function chips(box,list,get,set,after){box.innerHTML="";["Todos"].concat(list).forEach(function(s){var b=el("button","chip",s);b.type="button";b.setAttribute("aria-pressed",get()===s);b.onclick=function(){set(s);chips(box,list,get,set,after);after()};box.appendChild(b)})}
+
+var vacs=load("ef_v"),emps=load("ef_e"),fv="Todos",fe="Todos";
+
+function vtext(v){return "🔔 VACANTE | "+v.car+"\n🏢 Empresa: "+v.emp+"\n📍 Lugar: Facatativá\n📝 Requisitos: "+v.req+"\n📩 Contacto: "+v.con}
+function rVacs(){var box=$("#vlist");box.innerHTML="";var l=vacs.filter(function(v){return fv==="Todos"||v.sec===fv});
+if(!l.length){box.appendChild(el("p","note","Aún no hay vacantes en este sector. Crea la primera abajo."));return}
+l.forEach(function(v){var d=el("div","box vac");d.appendChild(el("small",null,v.sec));d.appendChild(el("b",null,v.car));
+d.appendChild(el("p",null,"Empresa: "+v.emp));d.appendChild(el("p",null,"Requisitos: "+v.req));d.appendChild(el("p",null,"Contacto: "+v.con));
+var r=el("div","row");r.style.marginTop="10px";var c=el("button","btn l","Copiar");c.type="button";c.onclick=function(){copy(vtext(v),c)};
+var x=el("button","x","Quitar");x.type="button";x.onclick=function(){vacs.splice(vacs.indexOf(v),1);save("ef_v",vacs);rVacs()};
+r.appendChild(c);r.appendChild(x);d.appendChild(r);box.appendChild(d)})}
+chips($("#fv"),SECT,function(){return fv},function(s){fv=s},rVacs);rVacs();
+$("#v-add").onclick=function(){var v={sec:$("#v-sec").value,car:$("#v-car").value.trim(),emp:$("#v-emp").value.trim(),req:$("#v-req").value.trim()||"Por confirmar",con:$("#v-con").value.trim()};
+if(!v.car||!v.emp||!v.con){alert("Completa cargo, empresa y contacto.");return}
+vacs.unshift(v);save("ef_v",vacs);rVacs();var o=$("#v-out");o.textContent=vtext(v);o.classList.remove("hid");
+var c=$("#v-copy");c.classList.remove("hid");c.onclick=function(){copy(vtext(v),c)};
+["v-car","v-emp","v-req","v-con"].forEach(function(i){$("#"+i).value=""})};
+
+var PROF={
+"Empleado con contrato":["Pide el contrato por escrito, con cargo, salario y condiciones.","Tu empleador debe afiliarte a salud, pensión y riesgos laborales desde que empiezas.","También debe afiliarte a una caja de compensación familiar.","Guarda copia del contrato y de tus afiliaciones."],
+"Trabajador independiente":["Afíliate a salud y pensión como independiente.","Paga tus aportes cada mes mediante la planilla PILA.","Pregunta si tu contrato exige también riesgos laborales.","Guarda los comprobantes de cada pago.","Un RUT te sirve para facturar y firmar contratos."],
+"Dueño de un negocio":["Inscríbete en el RUT ante la DIAN.","Haz la matrícula mercantil en la Cámara de Comercio de Facatativá y renuévala cada año.","Consulta en la Alcaldía las normas de uso del suelo y permisos de tu actividad.","Si contratas personas, afíliales a seguridad social y caja de compensación."]};
+var cur="";
+function rProf(){var b=$("#prof");b.innerHTML="";Object.keys(PROF).forEach(function(k){var c=el("button","chip",k);c.type="button";c.setAttribute("aria-pressed",cur===k);
+c.onclick=function(){cur=k;rProf()};b.appendChild(c)});
+var o=$("#prof-out");if(!cur){o.classList.add("hid");return}o.classList.remove("hid");$("#prof-t").textContent=cur;var s=$("#prof-s");s.innerHTML="";PROF[cur].forEach(function(t){s.appendChild(el("li",null,t))})}
+rProf();
+
+var CK=["Hoja de vida de una página con tus datos de contacto","Copia de tu cédula o tarjeta de identidad","Certificados de estudio o diploma","Certificado de afiliación a salud (EPS)","Referencias personales con nombre y teléfono","Correo electrónico con nombre serio y teléfono activo","Cuenta bancaria o medio para recibir tu pago","Ropa lista para la entrevista"];
+var done=load("ef_c");
+function rCk(){var n=done.length;var p=Math.round(n/CK.length*100);$("#barfill").style.width=p+"%";$("#bar").setAttribute("aria-valuenow",p);
+$("#ckmsg").textContent=n===CK.length?"¡Todo listo! Ya puedes entregar tu hoja de vida.":n+" de "+CK.length+" listos.";}
+var ckb=$("#ck");CK.forEach(function(t,i){var l=el("label","ck");var c=document.createElement("input");c.type="checkbox";c.checked=done.indexOf(i)>-1;
+c.onchange=function(){done=done.filter(function(x){return x!==i});if(c.checked)done.push(i);save("ef_c",done);rCk()};
+l.appendChild(c);l.appendChild(el("span",null,t));ckb.appendChild(l)});rCk();
+
+function rEmps(){var q=$("#q").value.toLowerCase();var tb=$("#tb");tb.innerHTML="";
+var l=emps.filter(function(e){return (fe==="Todos"||e.sec===fe)&&(e.n+" "+e.p).toLowerCase().indexOf(q)>-1});
+if(!l.length){var tr=el("tr");var td=el("td",null,"Aún no hay empresas con ese filtro. Agrega la primera abajo.");td.colSpan=5;tr.appendChild(td);tb.appendChild(tr);return}
+l.forEach(function(e){var tr=el("tr");[e.n,e.sec,e.p,e.c].forEach(function(t){tr.appendChild(el("td",null,t))});
+var td=el("td");var x=el("button","x","Quitar");x.type="button";x.onclick=function(){emps.splice(emps.indexOf(e),1);save("ef_e",emps);rEmps()};td.appendChild(x);tr.appendChild(td);tb.appendChild(tr)})}
+chips($("#fe"),SECT,function(){return fe},function(s){fe=s},rEmps);rEmps();$("#q").oninput=rEmps;
+$("#e-add").onclick=function(){var e={n:$("#e-n").value.trim(),sec:$("#e-s").value,p:$("#e-p").value.trim(),c:$("#e-c").value.trim()};
+if(!e.n||!e.p||!e.c){alert("Completa nombre, perfiles y contacto.");return}
+emps.unshift(e);save("ef_e",emps);rEmps();["e-n","e-p","e-c"].forEach(function(i){$("#"+i).value=""})};
+$("#e-copy").onclick=function(){var t=emps.map(function(e){return "🏢 "+e.n+" ("+e.sec+")\n👥 "+e.p+"\n📩 "+e.c}).join("\n\n");copy(t||"Directorio vacío",$("#e-copy"))};
+</script>
+</body>
+</html>
